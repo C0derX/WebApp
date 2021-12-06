@@ -1,0 +1,60 @@
+﻿@model StudentDto
+@{
+
+}
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Student Update Form  <a href="/cms/student" class="badge badge-primary float-right"><i class="mdi mdi-arrow-left"></i> Back</a></h4>
+                <form method="post" action="/cms/student/update" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(a => a.Id)
+                    <div class=" row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.fullname)
+                                @Html.TextBoxFor(a => a.fullname, new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.fullname)</p>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.address)
+                                @Html.TextBoxFor(a => a.address, new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.address)</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.phone_no)
+                                @Html.TextBoxFor(a => a.phone_no, new { @class = "form-control", @type = "number" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.phone_no)</p>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.email)
+                                @Html.TextBoxFor(a => a.email, new { @class = "form-control", @type = "email" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.email)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.dob)
+                                @Html.TextBoxFor(a => a.dob, "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.dob)</p>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.student_id)
+                                @Html.TextBoxFor(a => a.student_id, new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.student_id)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a href="/cms/student" class="btn btn-danger">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

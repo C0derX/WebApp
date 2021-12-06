@@ -1,0 +1,55 @@
+﻿@model ClientHomeIndexViewModel
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <h1>
+                Our Assingment <br>
+                On Asp .Net
+            </h1>
+            <p>
+                Assingment Are Not Easy,<br>
+                They Are Our Experience.<br>
+            </p>
+        </div>
+        <div class="col-2">
+            <img src="/Images/Default/banner.png">
+        </div>
+    </div>
+</div>
+
+        <h2>Student Table</h2>
+        <br />
+        <table>
+            <tr>
+                <th>Student Id</th>
+                <th>Stundent Name</th>
+                <th>Phone NO</th>
+            </tr>
+
+            @{
+                foreach (var item in Model.student)
+                {
+                    <tr>
+                        <td>@item.student_id</td>
+                        <td>@item.fullname</td>
+                        <td>@item.phone_no</td>
+                    </tr>
+                }
+            }
+        </table>

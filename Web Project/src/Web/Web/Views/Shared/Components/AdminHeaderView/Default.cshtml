@@ -1,0 +1,141 @@
+﻿@{ List<UserManagement.Entities.OrganizationModuleMap> modules = (List<UserManagement.Entities.OrganizationModuleMap>)ViewBag.modules;
+    string logo = "/Images/Default/default.png";
+    string orgName = "";
+    var organization = ViewBag.organization;
+    var user = ViewBag.user;
+    if (organization != null)
+    {
+        if (organization.logo != null)
+            logo = "/Images/Custom/" + organization.logo;
+        orgName = organization.organization_name;
+    }
+
+    string userImage = "/Images/Default/default.png";
+    if (user.UserDetails.image != null)
+        userImage = "/Images/Custom/" + user.UserDetails.image;
+
+
+
+}
+<div class="horizontal-menu">
+    <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+        <div class="container">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo" href="/administrator"><img src="/Images/Default/koi.png" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="/administrator"><img src="@logo" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item nav-search d-none d-lg-block">
+
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item dropdown">
+                    </li>
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html#" data-toggle="dropdown" id="profileDropdown-navbar">
+                            <img src="@userImage" alt="profile" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown flat-dropdown" aria-labelledby="profileDropdown-navbar">
+                            <div class="flat-dropdown-header">
+                                <div class="d-flex">
+                                    <img src="@userImage" alt="profile" class="profile-icon mr-2">
+                                    <div>
+                                        <span class="profile-name font-weight-bold">@user.UserDetails.getUserFullName()</span>
+                                        <p class="profile-designation">@user.UserRoleMap.Role.name</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-dropdown-body">
+                                <ul class="list-profile-items">
+                                    <li class="profile-item">
+                                        <a href="/Usermanagement/user/update/@user.Id" class="profile-dropdown-link">
+                                            <div class="d-flex align-items-center">
+                                                <i class="mdi mdi-account-outline text-primary"></i>
+                                                <div>
+                                                    <h5 class="item-title">My Profile</h5>
+                                                    <p class="item-detail">User Profile</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="profile-item">
+                                        <a href="/Usermanagement/organization/create" class="profile-dropdown-link">
+                                            <div class="d-flex align-items-center">
+                                                <i class="mdi mdi-account-multiple-outline text-primary"></i>
+                                                <div>
+                                                    <h5 class="item-title">Organization Profile</h5>
+                                                    <p class="item-detail">Organization Profile</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="profile-item">
+                                        <a href="/Usermanagement/User/change-password/@user.Id" class="profile-dropdown-link">
+                                            <div class="d-flex align-items-center">
+                                                <i class="mdi mdi-lock-open-outline text-info"></i>
+                                                <div>
+                                                    <h5 class="item-title">Change Password</h5>
+                                                    <p class="item-detail">Changes the password</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="profile-item">
+                                        <a href="/UserManagement/account/logout" class="profile-dropdown-link">
+                                            <div class="d-flex align-items-center">
+                                                <i class="mdi mdi-power text-dark"></i>
+                                                <div>
+                                                    <h5 class="item-title mt-0">Logout</h5>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                    <img src="/Images/Default/menu.svg" alt="" class="">
+                </button>
+            </div>
+        </div>
+    </nav>
+    <nav class="bottom-navbar">
+        <div class="container">
+            <ul class="nav page-navigation">
+                <li class="nav-item">
+                    <a class="nav-link" href="/administrator">
+                        <img src="~/Images/Default/home.svg" alt="" class="nav-icon-title">
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-item mega-menu">
+                    <a class="nav-link" href="#">
+                        <img src="~/Images/Default/widget.svg" alt="" class="nav-icon-title">
+                        <span class="menu-title">Menu</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="submenu">
+                        <div class="col-group-wrapper row">
+
+                            <div class="col-group col-md-6">
+                                <p class="category-heading">All</p>
+                                <ul class="submenu-item">
+                                    <li class="nav-item"><a class="nav-link" href="/cms/student/">Student</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/cms/organizer/">Organizer</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/cms/seminar/">Seminar</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/cms/register/">Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

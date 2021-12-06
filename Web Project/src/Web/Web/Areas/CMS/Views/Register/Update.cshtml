@@ -1,0 +1,48 @@
+﻿@model RegisterDto
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Registration Update Form  <a href="/cms/register" class="badge badge-primary float-right"><i class="mdi mdi-arrow-left"></i> Back</a></h4>
+                <form method="post" action="/cms/register/update" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(a => a.Id)
+
+
+                    <div class=" row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.title)
+                                @Html.TextBoxFor(a => a.title, new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.title)</p>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.seminar_id)
+                                @Html.DropDownListFor(a => a.seminar_id, (SelectList)ViewBag.seminar, "Select Seminar", new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.seminar_id)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.student_id)
+                                @Html.DropDownListFor(a => a.student_id, (SelectList)ViewBag.student, "Select Student", new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.student_id)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.attendance)
+                                @Html.DropDownListFor(a => a.attendance, new SelectList(Enum.GetValues(typeof(Core.Common.Enums.Attendance))), new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.attendance)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a href="/cms/register" class="btn btn-danger">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

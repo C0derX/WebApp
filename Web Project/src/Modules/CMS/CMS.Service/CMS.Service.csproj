@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Slugify.Core" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library\Core.Library\Core.Library.csproj" />
+    <ProjectReference Include="..\CMS.Entities\CMS.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

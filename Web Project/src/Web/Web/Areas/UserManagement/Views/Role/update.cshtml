@@ -1,0 +1,57 @@
+﻿@model RoleDto
+@{
+
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Role Update form   <a href="/UserManagement/Role" class="badge badge-primary float-right"><i class="mdi mdi-arrow-left"></i> Back</a></h4>
+                <form method="post" action="/UserManagement/Role/Update">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(a => a.Id)
+                    @Html.HiddenFor(a => a.created_by)
+                    <div class=" row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.name)
+                                @Html.TextBoxFor(a => a.name, new { @class = "form-control", @placeholder = "Eg. Admin" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.name)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.permissions)
+                                <br />
+                                @{
+                                    foreach (var itm in Enum.GetValues(typeof(Core.Common.Enums.Permissions)))
+                                    {
+                                        string status = "";
+                                        if (Model.permissions != null)
+                                        {
+                                            if (Model.permissions.Contains((Core.Common.Enums.Permissions)itm))
+                                            {
+                                                status = "checked";
+                                            }
+                                        }
+
+                                        <input name="permissions[]" class="ml-4" @status value="@itm" type="checkbox" /> @itm<br />
+                                    }
+                                }
+
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.permissions)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a href="/UserManagement/Role" class="btn btn-danger">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

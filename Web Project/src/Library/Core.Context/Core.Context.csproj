@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\CMS\CMS.Entities\CMS.Entities.csproj" />
+    <ProjectReference Include="..\..\Modules\UserManagement\UserManagement.Entities\UserManagement.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

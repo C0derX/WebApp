@@ -1,0 +1,88 @@
+﻿@model RoleIndexViewModel
+@{
+
+}
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Roles</h4>
+                <p class="card-description">
+                    <a href="/UserManagement/Role/Create" class="btn btn-rounded btn-primary btn-sm"><i class="mdi mdi-plus-circle mdi-18px"></i> New Role</a>
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Role Name</th>
+                                <th>Created Date</th>
+                                <th>Permissions</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                foreach (var item in Model.roleDetails)
+                                {
+                                    <tr>
+                                        <td>@item.name</td>
+                                        <td>@item.created_date.ToString()</td>
+                                        <td>
+                                            @{if (item.permissions != null)
+                                                {
+                                                    foreach (var permission in item.permissions)
+                                                    {
+                                                        <label class="badge badge-dark">@permission</label>
+                                                    }
+                                                }
+                                            }
+                                        </td>
+                                        @{ 
+                                            string badgeType = "badge-success";
+                                            string status = "Active";
+                                            if (!item.is_enabled)
+                                            {
+                                                badgeType = "badge-danger";
+                                                status = "Inactive";
+                                            }
+
+                                        }
+                                        <td><label class="badge @badgeType">@status</label></td>
+                                        <td>
+                                            <div>
+                                                <button class="btn btn-primary" type="button" id="dropdownMenuIconButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="mdi mdi-security"></i>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuIconButton6" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+                                                    <a class="dropdown-item" href="/UserManagement/Role/Update/@item.Id"><i class="mdi mdi-account-edit"></i> Edit</a>
+                                                    <a class="dropdown-item delete" href="/UserManagement/Role/Delete/@item.Id"><i class="mdi mdi-delete"></i> Delete</a>
+                                                    <div class="dropdown-divider"></div>
+
+                                                    @{
+                                                        if (item.is_enabled)
+                                                        {
+                                                            <a class="dropdown-item " href="/UserManagement/Role/Disable/@item.Id"><i class="mdi mdi-thumb-down"></i> Disable</a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a class="dropdown-item " href="/UserManagement/Role/Enable/@item.Id"><i class="mdi mdi-thumb-up"></i> Enable</a>
+                                                        }
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="/UserManagement/Role/assign-role-menu/@item.Id"><i class="mdi mdi-menu"></i> Assign Menu </a>
+                                                    }
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <Pagination info="@ViewBag.pagerInfo"></Pagination>
+            </div>
+        </div>
+    </div>
+</div>

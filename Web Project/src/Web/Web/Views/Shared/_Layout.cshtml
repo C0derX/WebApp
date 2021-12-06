@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <title>Home @ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project CMS">
+    <meta name="author" content="Project">
+    <meta charset="UTF-8">
+    <link href="~/Client/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+    <a id="button"></a>
+    @await Component.InvokeAsync("ClientHeaderView")
+    <div class="container">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+    @await Component.InvokeAsync("ClientFooterView")
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+   </body>
+</html>

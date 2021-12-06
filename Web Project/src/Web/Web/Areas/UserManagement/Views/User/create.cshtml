@@ -1,0 +1,113 @@
+﻿@model UserDto
+@{
+
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">User Entry form   <a href="/UserManagement/User" class="badge badge-primary float-right"><i class="mdi mdi-arrow-left"></i> Back</a></h4>
+                <form method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <div class=" row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.user_detail_dto.first_name)
+                                @Html.TextBoxFor(a => a.user_detail_dto.first_name, new { @class = "form-control", @placeholder = "Eg. John" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.user_detail_dto.first_name)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.user_detail_dto.last_name)
+                                @Html.TextBoxFor(a => a.user_detail_dto.last_name, new { @class = "form-control", @placeholder = "Eg. Doe" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.user_detail_dto.last_name)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.user_detail_dto.primary_contact)
+                                @Html.TextBoxFor(a => a.user_detail_dto.primary_contact, new { @class = "form-control", @placeholder = "Eg. 980000000" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.user_detail_dto.primary_contact)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.user_detail_dto.secondary_contact)
+                                @Html.TextBoxFor(a => a.user_detail_dto.secondary_contact, new { @class = "form-control", @placeholder = "Eg. 980000000" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.user_detail_dto.secondary_contact)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.user_detail_dto.temporary_address)
+                                @Html.TextBoxFor(a => a.user_detail_dto.temporary_address, new { @class = "form-control", @placeholder = "Eg. Birtamod" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.user_detail_dto.temporary_address)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.user_detail_dto.permanent_address)
+                                @Html.TextBoxFor(a => a.user_detail_dto.permanent_address, new { @class = "form-control", @placeholder = "Eg. Birtamod" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.user_detail_dto.permanent_address)</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <img id="image" class="image-preview" src="~/Images/Default/default.png" alt="" />
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.user_detail_dto.image)
+                                <input type="file" name="file" id="file" class="form-control" />
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.user_detail_dto.image)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.email)
+                                @Html.TextBoxFor(a => a.email, new { @class = "form-control", @placeholder = "Eg. abc@gmail.com" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.email)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.username)
+                                @Html.TextBoxFor(a => a.username, new { @class = "form-control", @placeholder = "Eg. admin" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.username)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.password)
+                                @Html.TextBoxFor(a => a.password, new { @class = "form-control", @placeholder = "Eg. X5eslsdsk@4dgF5#" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.password)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.role_id)
+                                @Html.DropDownListFor(a => a.role_id,(SelectList)ViewBag.roles, new { @class = "form-control"})
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.role_id)</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a href="/UserManagement/User" class="btn btn-danger">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $("#file").change(function () {
+            readURL(this);
+        });
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+}

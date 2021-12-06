@@ -1,0 +1,139 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Web</AssemblyName>
+    <RootNamespace>Web</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210514162320_new.cs" />
+    <Compile Remove="Migrations\20210514162320_new.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\Images\Custom\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Administrator\vendors\ace-builds\src-min\ace.js" />
+    <None Include="wwwroot\Administrator\vendors\ace-builds\src-min\mode-javascript.js" />
+    <None Include="wwwroot\Administrator\vendors\ace-builds\src-min\theme-chaos.js" />
+    <None Include="wwwroot\Administrator\vendors\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <None Include="wwwroot\Administrator\vendors\bootstrap-maxlength\bootstrap-maxlength.min.js" />
+    <None Include="wwwroot\Administrator\vendors\c3\c3.js" />
+    <None Include="wwwroot\Administrator\vendors\chart.js\Chart.min.js" />
+    <None Include="wwwroot\Administrator\vendors\chartist\chartist.min.js" />
+    <None Include="wwwroot\Administrator\vendors\clipboard\clipboard.min.js" />
+    <None Include="wwwroot\Administrator\vendors\codemirror\codemirror.js" />
+    <None Include="wwwroot\Administrator\vendors\codemirror\javascript.js" />
+    <None Include="wwwroot\Administrator\vendors\codemirror\shell.js" />
+    <None Include="wwwroot\Administrator\vendors\d3\d3.min.js" />
+    <None Include="wwwroot\Administrator\vendors\datatables.net-bs4\dataTables.bootstrap4.js" />
+    <None Include="wwwroot\Administrator\vendors\datatables.net\jquery.dataTables.js" />
+    <None Include="wwwroot\Administrator\vendors\dragula\dragula.min.js" />
+    <None Include="wwwroot\Administrator\vendors\dropify\dropify.min.js" />
+    <None Include="wwwroot\Administrator\vendors\dropzone\dropzone.js" />
+    <None Include="wwwroot\Administrator\vendors\flot\jquery.flot.categories.js" />
+    <None Include="wwwroot\Administrator\vendors\flot\jquery.flot.fillbetween.js" />
+    <None Include="wwwroot\Administrator\vendors\flot\jquery.flot.js" />
+    <None Include="wwwroot\Administrator\vendors\flot\jquery.flot.pie.js" />
+    <None Include="wwwroot\Administrator\vendors\flot\jquery.flot.resize.js" />
+    <None Include="wwwroot\Administrator\vendors\flot\jquery.flot.stack.js" />
+    <None Include="wwwroot\Administrator\vendors\fullcalendar\fullcalendar.min.js" />
+    <None Include="wwwroot\Administrator\vendors\inputmask\inputmask.binding.js" />
+    <None Include="wwwroot\Administrator\vendors\inputmask\jquery.inputmask.bundle.js" />
+    <None Include="wwwroot\Administrator\vendors\ion-rangeslider\js\ion.rangeSlider.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-asColorPicker\jquery-asColorPicker.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-asColor\jquery-asColor.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-asGradient\jquery-asGradient.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-bar-rating\jquery.barrating.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-contextmenu\jquery.contextMenu.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-file-upload\jquery.uploadfile.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-mapael\france_departments.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-mapael\jquery.mapael.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-mapael\usa_states.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-mapael\world_countries.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-sparkline\jquery.sparkline.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-steps\jquery.steps.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-tags-input\jquery.tagsinput.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-toast-plugin\jquery.toast.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery-validation\jquery.validate.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery.avgrund\jquery.avgrund.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jquery.repeater\jquery.repeater.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jsgrid\jsgrid.min.js" />
+    <None Include="wwwroot\Administrator\vendors\js\vendor.bundle.base.js" />
+    <None Include="wwwroot\Administrator\vendors\justgage\justgage.js" />
+    <None Include="wwwroot\Administrator\vendors\justgage\raphael-2.1.4.min.js" />
+    <None Include="wwwroot\Administrator\vendors\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <None Include="wwwroot\Administrator\vendors\jvectormap\jquery-jvectormap.min.js" />
+    <None Include="wwwroot\Administrator\vendors\lightgallery\js\lightgallery-all.min.js" />
+    <None Include="wwwroot\Administrator\vendors\mdi\css\materialdesignicons.css.map" />
+    <None Include="wwwroot\Administrator\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <None Include="wwwroot\Administrator\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <None Include="wwwroot\Administrator\vendors\mdi\scss\materialdesignicons.scss" />
+    <None Include="wwwroot\Administrator\vendors\mdi\scss\_animated.scss" />
+    <None Include="wwwroot\Administrator\vendors\mdi\scss\_core.scss" />
+    <None Include="wwwroot\Administrator\vendors\mdi\scss\_extras.scss" />
+    <None Include="wwwroot\Administrator\vendors\mdi\scss\_functions.scss" />
+    <None Include="wwwroot\Administrator\vendors\mdi\scss\_icons.scss" />
+    <None Include="wwwroot\Administrator\vendors\mdi\scss\_path.scss" />
+    <None Include="wwwroot\Administrator\vendors\mdi\scss\_variables.scss" />
+    <None Include="wwwroot\Administrator\vendors\moment\moment.min.js" />
+    <None Include="wwwroot\Administrator\vendors\morris.js\morris.min.js" />
+    <None Include="wwwroot\Administrator\vendors\nouislider\nouislider.min.js" />
+    <None Include="wwwroot\Administrator\vendors\owl-carousel-2\owl.carousel.min.js" />
+    <None Include="wwwroot\Administrator\vendors\progressbar.js\progressbar.min.js" />
+    <None Include="wwwroot\Administrator\vendors\pwstabs\jquery.pwstabs.min.js" />
+    <None Include="wwwroot\Administrator\vendors\quill\quill.min.js" />
+    <None Include="wwwroot\Administrator\vendors\raphael\raphael.min.js" />
+    <None Include="wwwroot\Administrator\vendors\select2\select2.min.js" />
+    <None Include="wwwroot\Administrator\vendors\simplemde\simplemde.min.js" />
+    <None Include="wwwroot\Administrator\vendors\summernote\dist\summernote-bs4.min.js" />
+    <None Include="wwwroot\Administrator\vendors\sweetalert\sweetalert.min.js" />
+    <None Include="wwwroot\Administrator\vendors\tempusdominus-bootstrap-4\tempusdominus-bootstrap-4.js" />
+    <None Include="wwwroot\Administrator\vendors\tinymce\tinymce.min.js" />
+    <None Include="wwwroot\Administrator\vendors\typeahead.js\typeahead.bundle.min.js" />
+    <None Include="wwwroot\Administrator\vendors\x-editable\bootstrap-editable.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.7.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\CMS\CMS.Context\CMS.Context.csproj" />
+    <ProjectReference Include="..\..\Modules\CMS\CMS.Service\CMS.Service.csproj" />
+    <ProjectReference Include="..\..\Modules\UserManagement\UserManagement.Context\UserManagement.Context.csproj" />
+    <ProjectReference Include="..\..\Modules\UserManagement\UserManagement.Service\UserManagement.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Shared\Components\AdminHeaderView\Default.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

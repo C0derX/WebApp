@@ -1,0 +1,394 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj": {}
+  },
+  "projects": {
+    "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj",
+        "projectName": "Core.Common",
+        "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj",
+        "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
+        "outputPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Routing.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj",
+        "projectName": "Core.Context",
+        "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj",
+        "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
+        "outputPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Context\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\z\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj": {
+                "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj"
+              },
+              "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj": {
+                "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj",
+        "projectName": "Core.Library",
+        "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj",
+        "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
+        "outputPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Library\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj": {
+                "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\z\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj",
+        "projectName": "CMS.Entities",
+        "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj",
+        "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
+        "outputPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj": {
+                "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj",
+        "projectName": "UserManagement.Entities",
+        "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj",
+        "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
+        "outputPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj": {
+                "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj",
+        "projectName": "UserManagement.Service",
+        "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj",
+        "packagesPath": "C:\\Users\\Anon\\.nuget\\packages\\",
+        "outputPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj": {
+                "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj"
+              },
+              "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj": {
+                "projectPath": "D:\\z\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

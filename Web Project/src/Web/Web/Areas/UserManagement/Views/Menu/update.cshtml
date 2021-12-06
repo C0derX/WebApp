@@ -1,0 +1,109 @@
+﻿@model MenuDto
+@{
+
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <h4 class="card-title">Update Menu  <a href="/UserManagement/Menu" class="badge badge-primary float-right"><i class="mdi mdi-arrow-left"></i> Back</a></h4>
+                <form method="post" action="/UserManagement/Menu/Update">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(a => a.Id)
+                    <div class=" row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.name)
+                                @Html.TextBoxFor(a => a.name, new { @class = "form-control", @placeholder = "Eg. Sales" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.name)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.module_id)
+                                @Html.DropDownListFor(a => a.module_id, (SelectList)ViewBag.moduleList, new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.module_id)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.parent_menu_id)
+                                @Html.DropDownListFor(a => a.parent_menu_id, (SelectList)ViewBag.parentMenuList, "Top Menu", new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.parent_menu_id)</p>
+                            </div>
+                            @{
+                                var permissionValue = Model.permissions.First();
+                            }
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.permissions)
+                                <br />
+                                @{
+                                    foreach (var itm in Enum.GetValues(typeof(Core.Common.Enums.Permissions)))
+                                    {
+                                        string status = "";
+                                        if (Model.permissions != null)
+                                        {
+                                            if (Model.permissions.Contains((Core.Common.Enums.Permissions)itm))
+                                            {
+                                                status = "checked";
+                                            }
+                                        }
+
+                                        <input name="permissions[]" class="ml-4" @status value="@itm" type="checkbox" /> @itm
+                                    }
+                                }
+
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.permissions)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.is_visible_to_menu)
+                                @Html.CheckBoxFor(a => a.is_visible_to_menu, new { @class = "form-control" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.is_visible_to_menu)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.display_icon)
+                                @Html.TextBoxFor(a => a.display_icon, new { @class = "form-control", @placeholder = "Eg. fa fa-user" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.display_icon)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.web_url)
+                                @Html.TextBoxFor(a => a.web_url, new { @class = "form-control", @placeholder = "Eg. /billing/sales/create" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.web_url)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.api_url)
+                                @Html.TextBoxFor(a => a.api_url, new { @class = "form-control", @placeholder = "Eg. /api/billing/sales/create" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.api_url)</p>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(a => a.display_order)
+                                @Html.TextBoxFor(a => a.display_order, new { @class = "form-control", @placeholder = "Eg. 1,2,3" })
+                                <p class="text-danger">@Html.ValidationMessageFor(a => a.display_order)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a href="/UserManagement/Menu" class="btn btn-danger">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+    <script>
+        $('input[name="permissions[]"]').on('change', function () {
+            $('input[name="permissions[]"]').not(this).prop('checked', false);
+        });
+    </script>
+}

@@ -1,0 +1,60 @@
+﻿@model OrganizationModuleMapModel
+@{
+
+}
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Assign Modules To @Model.organization.organization_name</h4>
+                <form method="post" enctype="multipart/form-data" action="/UserManagement/Organization/assign-module">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(a => a.organization_id)
+
+                    <div class=" row">
+                        <div class="col-md-6">
+                            <h4><input type="checkbox" id="select_all" /> Select All</h4>
+                            <ul style="list-style-type:none;">
+                                @{
+                                    foreach (var item in Model.modules)
+                                    {
+                                        string selected = "";
+                                        if (Model.organizationModuleMaps.Any(a => a.module_id == item.Id))
+                                        {
+                                            selected = "checked";
+                                        }
+                                        <li>
+                                            <input type="checkbox" name="module_ids[]" @selected value="@item.Id" id="@item.Id" />
+                                            @item.name
+
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                        <div class="col-md-6"></div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $('#select_all').change(function () {
+            var checkboxes = $(this).closest('form').find(':checkbox');
+            checkboxes.prop('checked', $(this).is(':checked'));
+        });
+
+        $(function () {
+            $("input[type='checkbox']").change(function () {
+                $(this).siblings('ul')
+                    .find("input[type='checkbox']")
+                    .prop('checked', this.checked);
+            });
+        });
+    </script>
+}

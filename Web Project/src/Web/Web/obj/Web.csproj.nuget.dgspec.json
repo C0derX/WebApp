@@ -1,0 +1,739 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Web\\Web\\Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj",
+        "projectName": "Core.Common",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Routing.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj",
+        "projectName": "Core.Context",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj",
+        "projectName": "Core.Library",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Library\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Context\\CMS.Context.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Context\\CMS.Context.csproj",
+        "projectName": "CMS.Context",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Context\\CMS.Context.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Context\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Service\\CMS.Service.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Service\\CMS.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj",
+        "projectName": "CMS.Entities",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Service\\CMS.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Service\\CMS.Service.csproj",
+        "projectName": "CMS.Service",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Service\\CMS.Service.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Entities\\CMS.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Slugify.Core": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Context\\UserManagement.Context.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Context\\UserManagement.Context.csproj",
+        "projectName": "UserManagement.Context",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Context\\UserManagement.Context.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Context\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Context\\Core.Context.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj",
+        "projectName": "UserManagement.Entities",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Common\\Core.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj",
+        "projectName": "UserManagement.Service",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Library\\Core.Library\\Core.Library.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Entities\\UserManagement.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Web\\Web\\Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Web\\Web\\Web.csproj",
+        "projectName": "Web",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Web\\Web\\Web.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Web\\Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Context\\CMS.Context.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Context\\CMS.Context.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Service\\CMS.Service.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\CMS\\CMS.Service\\CMS.Service.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Context\\UserManagement.Context.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Context\\UserManagement.Context.csproj"
+              },
+              "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj": {
+                "projectPath": "C:\\Users\\Acer\\Desktop\\assignment_seminars\\Project\\src\\Modules\\UserManagement\\UserManagement.Service\\UserManagement.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Runtime": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.7.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

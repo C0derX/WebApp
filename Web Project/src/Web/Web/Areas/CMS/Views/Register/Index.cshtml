@@ -1,0 +1,58 @@
+﻿
+@model RegisterIndexViewModel
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Register</h4>
+                <p class="card-description">
+                    <a href="/cms/register/create" class="btn btn-rounded btn-primary btn-sm"><i class="mdi mdi-plus-circle mdi-18px"></i>Add New Registration</a>
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Student Name</th>
+                                <th>Seminar Title</th>
+                                <th>Attendance</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                foreach (var item in Model.registerDetails)
+                                {
+
+
+                                    <tr>
+                                        <td>@item.title</td>
+                                        <td>@item.student.fullname</td>
+                                        <td>@item.seminar.title</td>
+                                        <td>@item.attendance</td>
+                                        <td>
+                                            <div>
+                                                <button class="btn btn-primary" type="button" id="dropdownMenuIconButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="mdi mdi-security"></i>
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuIconButton6" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+                                                    <a class="dropdown-item" href="/cms/register/update/@item.Id"><i class="mdi mdi-account-edit"></i> Edit</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item delete" href="/cms/register/delete/@item.Id"><i class="mdi mdi-delete"></i> Delete</a>
+                                                    <div class="dropdown-divider"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <Pager info="ViewBag.pagerInfo"></Pager>
+            </div>
+        </div>
+    </div>
+</div>
+

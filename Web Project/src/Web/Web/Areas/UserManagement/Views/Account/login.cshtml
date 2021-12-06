@@ -1,0 +1,83 @@
+﻿@model Web.Areas.UserManagement.Dto.LoginDto
+
+@{ Layout = null;
+
+    var org = ViewBag.organization;
+    string orgLogo = "/Images/Default/default.png";
+    if (org != null)
+    {
+        if (!string.IsNullOrWhiteSpace(org.logo))
+            orgLogo = "/Images/Custom/" + org.logo;
+    } }
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CMS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="~/Administrator/vendors/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="~/Administrator/vendors/feather/feather.css" rel="stylesheet" />
+    <link href="~/Administrator/vendors/css/vendor.bundle.base.css" rel="stylesheet" />
+    <link href="~/Administrator/css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/favicon.ico" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
+                <div class="row flex-grow">
+                    <div class="col-lg-12 d-flex align-items-center justify-content-center">
+                        <div class="auth-form-transparent text-left p-3">
+                            <div class="brand-logo" style="padding-left:35%">
+                                <img  src="@orgLogo" alt="logo">
+                                <h4>Welcome back!</h4>
+                                <h6 class="font-weight-light">Happy to see you again!</h6>
+                            </div>
+                            
+                            <form class="pt-3" method="post">
+                                @Html.Partial("message")
+                                <div class="form-group">
+                                    <label for="exampleInputEmail">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="fa fa-user fa-lg text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" id="username" name="username" class="form-control form-control-lg border-left-0" placeholder="Username">
+                                    </div>
+                                    <p class="text-danger">@Html.ValidationMessageFor(a => a.username)</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="fa fa-lock fa-lg text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" id="password" name="password" class="form-control form-control-lg border-left-0" placeholder="Password">
+                                    </div>
+                                    <p class="text-danger">@Html.ValidationMessageFor(a => a.password)</p>
+                                </div>
+                                <div class="my-3">
+                                    <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">LOGIN</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Administrator/vendors/js/vendor.bundle.base.js"></script>
+    <script>
+        $("#username").focus();
+    </script>
+</body>
+
+</html>
+

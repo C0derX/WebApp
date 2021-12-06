@@ -1,0 +1,104 @@
+﻿@model RoleMenuModel
+@{
+
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Assign Menu To Roles <a href="/UserManagement/Role" class="badge badge-primary float-right"><i class="mdi mdi-arrow-left"></i> Back</a></h4>
+                <form method="post" action="/UserManagement/Role/assign-role-menu">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(a => a.role_id)
+                    <div class=" row">
+                        <div class="col-md-6">
+                            <h4><input type="checkbox" id="select_all" /> Select All</h4>
+                            @{
+                                foreach (var item in Model.modules)
+                                {
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <input type="checkbox" name="selectedModules" />
+                                            @item.name
+                                            <ul style="list-style-type:none;">
+                                                @{ foreach (var menu in item.Menus.Where(a => a.parent_menu_id == null))
+                                                    {
+
+                                                        string selected = "";
+                                                        if (Model.roleMenuMaps.Any(a => a.menu_id == menu.Id))
+                                                        {
+                                                            selected = "checked";
+                                                        }
+                                                        <li>
+                                                            <input type="checkbox" name="menu_ids[]" @selected value="@menu.Id" id="@menu.Id" />
+                                                            @menu.name
+
+                                                            <ul style="list-style-type:none">
+                                                                @{
+                                                                    if (menu.hasSubMenus())
+                                                                    {
+                                                                        foreach (var sub in menu.sub_menus)
+                                                                        {
+                                                                            <li>
+                                                                                <input type="checkbox" name="menu_ids[]" @selected value="@sub.Id" id="@sub.Id" />
+                                                                                @sub.name
+                                                                            <ul style="list-style-type:none">
+                                                                                @{
+                                                                                    if (sub.hasSubMenus())
+                                                                                    {
+                                                                                        foreach (var sub1 in sub.sub_menus)
+                                                                                        {
+                                                                                            <li>
+                                                                                                <input type="checkbox" name="menu_ids[]" @selected value="@sub1.Id" id="@sub1.Id" />
+                                                                                                @sub1.name
+
+                                                                                            </li>
+                                                                                        }
+                                                                                    }
+                                                                                }
+
+                                                                            </ul>
+                                                                            </li>
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                            </ul>
+                                                        </li>
+                                                    }
+                                                }
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                }
+                            }
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <a href="/UserManagement/Role" class="btn btn-danger">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $('#select_all').change(function () {
+            var checkboxes = $(this).closest('form').find(':checkbox');
+            checkboxes.prop('checked', $(this).is(':checked'));
+        });
+
+        $(function () {
+            $("input[type='checkbox']").change(function () {
+                $(this).siblings('ul')
+                    .find("input[type='checkbox']")
+                    .prop('checked', this.checked);
+            });
+        });
+    </script>
+}
